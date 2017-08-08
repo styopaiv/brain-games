@@ -1,6 +1,6 @@
 {
   "name": "brain-games-ivstyopa",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "First Hexlet Project",
   "main": "index.js",
   "bin": {
@@ -17,7 +17,9 @@
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "dependencies": {
     "readline-sync": "^1.4.7"
   }
 }
