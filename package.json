@@ -1,10 +1,10 @@
 {
   "name": "brain-games-ivstyopa",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "First Hexlet Project",
   "main": "index.js",
   "bin": {
-    "brain-games": "src/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js"
   },
   "scripts": {
     "babel-node": "babel-node",
