@@ -7,7 +7,7 @@ const name = askName();
 
 welcomeUser(name);
 
-export const askQuestion = () => {
+const askQuestion = () => {
   const iter = (counter) => {
     const randomNum = Math.floor(Math.random() * (100 - 1)) + 1;
     console.log(`Question: ${randomNum} `);
