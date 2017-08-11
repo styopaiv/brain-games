@@ -1,6 +1,6 @@
 {
   "name": "brain-games-ivstyopa",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "First Hexlet project",
   "main": "index.js",
   "bin": {

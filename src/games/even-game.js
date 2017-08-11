@@ -1,4 +1,5 @@
-import { makeGame, getNum } from '..';
+import makeGame from '..';
+import getNum from '../utils';
 
 const rules = 'Answer "yes" if number even otherwise answer "no".';
 
@@ -8,6 +9,4 @@ const evenGameData = () => {
   return [question, correctAnswer];
 };
 
-export default () => {
-  makeGame(evenGameData, rules);
-};
+export default () => makeGame(evenGameData, rules);

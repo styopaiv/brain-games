@@ -1,11 +1,30 @@
-import { getNum, makeGame } from '..';
+import makeGame from '..';
+import getNum from '../utils';
 
 const rules = 'What is the result of the expression?';
+const operators = ['+', '-', '*'];
 
 const getOperator = () => {
-  const operators = ['+', '-', '*'];
   const randomOperator = operators[Math.floor(Math.random() * operators.length)];
   return randomOperator;
+};
+
+const getCalcAnswer = (a, b, operator) => {
+  let answer;
+  switch (operator) {
+    case '+':
+      answer = a + b;
+      break;
+    case '-':
+      answer = a - b;
+      break;
+    case '*':
+      answer = a * b;
+      break;
+    default: answer = 0;
+  }
+  answer = `${answer}`;
+  return answer;
 };
 
 const calcGameData = () => {
@@ -13,23 +32,9 @@ const calcGameData = () => {
   const randomNum2 = getNum();
   const operator = getOperator();
   const question = `${randomNum1} ${operator} ${randomNum2}`;
-  let correctAnswer;
-  switch (operator) {
-    case '+':
-      correctAnswer = randomNum1 + randomNum2;
-      break;
-    case '-':
-      correctAnswer = randomNum1 - randomNum2;
-      break;
-    case '*':
-      correctAnswer = randomNum1 * randomNum2;
-      break;
-    default: correctAnswer = 0;
-  }
-  correctAnswer = String(correctAnswer);
+  const correctAnswer = getCalcAnswer(randomNum1, randomNum2, operator);
+
   return [question, correctAnswer];
 };
 
-export default () => {
-  makeGame(calcGameData, rules);
-};
+export default () => makeGame(calcGameData, rules);
