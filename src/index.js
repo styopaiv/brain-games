@@ -17,6 +17,13 @@ export const getNum = () => {
   return randomNum;
 };
 
+// const gcd = (randomNum1, randomNum2) => {
+//   if (randomNum2 === 0) {
+//     return randomNum1;
+//   }
+//   return gcd(randomNum2, randomNum1 % randomNum1);
+// };
+
 export const makeGame = (data, rules) => {
   const iterStart = 1;
   showRules(rules);
