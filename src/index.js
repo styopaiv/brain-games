@@ -17,16 +17,18 @@ export const getNum = () => {
   return randomNum;
 };
 
-export const makeGame = (data) => {
+export const makeGame = (data, rules) => {
   const iterStart = 1;
+  showRules(rules);
+  const name = askName();
+  welcomeUser(name);
   const iter = (counter) => {
     if (counter > 3) {
       return null;
     }
-    const question = data[0];
-    const correctAnswer = data[1];
-    const name = data[2];
-    console.log(data);
+    const gameData = data();
+    const question = gameData[0];
+    const correctAnswer = gameData[1];
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (counter < 3 && userAnswer === correctAnswer) {
