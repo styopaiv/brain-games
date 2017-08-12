@@ -29,7 +29,6 @@ const progressionGameData = () => {
   const prog = createProg();
   const missingElem = getRandomElem();
   const correctAnswer = prog[missingElem];
-  console.log(correctAnswer);
   prog[missingElem] = '..';
   const question = prog.join(' ');
 
