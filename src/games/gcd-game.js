@@ -1,5 +1,5 @@
 import makeGame from '..';
-import getNum from '../utils';
+import { getNum } from '../utils';
 
 const rules = 'Find the greatest common divisor of given numbers.';
 

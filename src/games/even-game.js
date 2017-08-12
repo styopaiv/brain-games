@@ -1,5 +1,5 @@
 import makeGame from '..';
-import getNum from '../utils';
+import { getNum } from '../utils';
 
 const rules = 'Answer "yes" if number even otherwise answer "no".';
 

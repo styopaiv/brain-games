@@ -1,5 +1,5 @@
 import makeGame from '..';
-import getNum from '../utils';
+import { getNum } from '../utils';
 
 const rules = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
