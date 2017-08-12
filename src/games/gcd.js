@@ -15,6 +15,7 @@ export const gcdGameData = () => {
   const randomNum2 = getNum();
   const question = `${randomNum1} ${randomNum2}`;
   const correctAnswer = `${calcGcd(randomNum1, randomNum2)}`;
+
   return [question, correctAnswer];
 };
 

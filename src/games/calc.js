@@ -11,6 +11,7 @@ const getOperator = () => {
 
 const getCalcAnswer = (a, b, operator) => {
   let answer;
+
   switch (operator) {
     case '+':
       answer = a + b;
@@ -23,18 +24,18 @@ const getCalcAnswer = (a, b, operator) => {
       break;
     default: answer = 0;
   }
-  answer = `${answer}`;
-  return answer;
+
+  const question = `${a} ${operator} ${b}`;
+  return [question, `${answer}`];
 };
 
 const calcGameData = () => {
-  const randomNum1 = getNum();
-  const randomNum2 = getNum();
+  const num1 = getNum();
+  const num2 = getNum();
   const operator = getOperator();
-  const question = `${randomNum1} ${operator} ${randomNum2}`;
-  const correctAnswer = getCalcAnswer(randomNum1, randomNum2, operator);
+  const data = getCalcAnswer(num1, num2, operator);
 
-  return [question, correctAnswer];
+  return data;
 };
 
 export default () => makeGame(calcGameData, rules);
