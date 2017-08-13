@@ -1,22 +1,27 @@
-import { getNum } from '../utils';
 import makeGame from '..';
+import getRandomNum from '../utils';
 
 const rules = 'Answer "yes" if number is prime otherwise answer "no".';
 
-const isPrime = (n) => {
-  let i = 2;
-
-  while (n % i !== 0 && i <= n) {
-    i += 1;
-  }
-  if (i !== n) {
+const isPrime = (num) => {
+  if (num < 2) {
     return false;
   }
+
+  let divider = 2;
+
+  while (divider <= num / 2) {
+    if (num % divider === 0) {
+      return false;
+    }
+    divider += 1;
+  }
+
   return true;
 };
 
 const primeGameData = () => {
-  const question = getNum();
+  const question = getRandomNum();
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
   return [question, correctAnswer];

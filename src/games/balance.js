@@ -1,19 +1,14 @@
 import makeGame from '..';
-import { balanceGameNum } from '../utils';
 
 const rules = 'Balance the given number.';
 
-const arrayFromNum = (num) => {
-  const str = `${num}`;
-  const strArray = str.split('');
-
-  for (let i = 0; i <= strArray.length - 1; i += 1) {
-    strArray[i] = +strArray[i];
-  }
-
-  return strArray;
+export const balanceGameNum = () => {
+  const randomNum = Math.floor(Math.random() * (5000 - 1)) + 1;
+  return randomNum;
 };
 
+const arrayFromNum = num =>
+  `${num}`.split('').map(char => +char);
 
 const balanceNum = (num) => {
   const arr = arrayFromNum(num);

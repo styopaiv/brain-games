@@ -1,5 +1,5 @@
 import makeGame from '..';
-import { getNum } from '../utils';
+import getRandomNum from '../utils';
 
 const rules = 'Find the greatest common divisor of given numbers.';
 
@@ -11,8 +11,8 @@ const calcGcd = (a, b) => {
 };
 
 export const gcdGameData = () => {
-  const randomNum1 = getNum();
-  const randomNum2 = getNum();
+  const randomNum1 = getRandomNum();
+  const randomNum2 = getRandomNum();
   const question = `${randomNum1} ${randomNum2}`;
   const correctAnswer = `${calcGcd(randomNum1, randomNum2)}`;
 

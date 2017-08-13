@@ -1,5 +1,5 @@
 import makeGame from '..';
-import { getNum } from '../utils';
+import getRandomNum from '../utils';
 
 const rules = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
@@ -30,8 +30,8 @@ const getCalcAnswer = (a, b, operator) => {
 };
 
 const calcGameData = () => {
-  const num1 = getNum();
-  const num2 = getNum();
+  const num1 = getRandomNum();
+  const num2 = getRandomNum();
   const operator = getOperator();
   const data = getCalcAnswer(num1, num2, operator);
 
