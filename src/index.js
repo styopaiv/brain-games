@@ -26,7 +26,7 @@ export default (data, rule) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${rule}\n`);
   const name = readlineSync.question('May I ask your name? ');
-  console.log(`Hello, ${name}! \n`);
+  console.log(`Hello, ${name}!\n`);
 
   const result = runGame(gameMoves, data);
 
