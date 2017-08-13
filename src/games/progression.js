@@ -1,7 +1,7 @@
 import makeGame from '..';
 import getRandomNum from '../utils';
 
-const rules = 'What number is missing in this progression?';
+const rule = 'What number is missing in this progression?';
 const interval = getRandomNum();
 
 const getRandomElem = () => {
@@ -17,8 +17,7 @@ const createProg = () => {
     if (acc.length === 10) {
       return acc;
     }
-    acc.push(num);
-    return iter(acc, num + interval);
+    return iter(acc.concat(num), num + interval);
   };
 
   return iter(arr, progStart);
@@ -34,4 +33,4 @@ const progressionGameData = () => {
   return [question, `${correctAnswer}`];
 };
 
-export default () => makeGame(progressionGameData, rules);
+export default () => makeGame(progressionGameData, rule);

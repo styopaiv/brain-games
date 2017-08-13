@@ -1,7 +1,7 @@
 import makeGame from '..';
 import getRandomNum from '../utils';
 
-const rules = 'Answer "yes" if number even otherwise answer "no".';
+const rule = 'Answer "yes" if number even otherwise answer "no".';
 
 const evenGameData = () => {
   const question = getRandomNum();
@@ -10,4 +10,4 @@ const evenGameData = () => {
   return [question, correctAnswer];
 };
 
-export default () => makeGame(evenGameData, rules);
+export default () => makeGame(evenGameData, rule);

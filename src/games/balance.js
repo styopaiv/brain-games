@@ -1,8 +1,8 @@
 import makeGame from '..';
 
-const rules = 'Balance the given number.';
+const rule = 'Balance the given number.';
 
-export const balanceGameNum = () => {
+const balanceGameNum = () => {
   const randomNum = Math.floor(Math.random() * (5000 - 1)) + 1;
   return randomNum;
 };
@@ -36,4 +36,4 @@ const balanceGameData = () => {
 };
 
 
-export default () => makeGame(balanceGameData, rules);
+export default () => makeGame(balanceGameData, rule);

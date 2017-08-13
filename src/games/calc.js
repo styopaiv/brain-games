@@ -1,7 +1,7 @@
 import makeGame from '..';
 import getRandomNum from '../utils';
 
-const rules = 'What is the result of the expression?';
+const rule = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
 const getOperator = () => {
@@ -38,4 +38,4 @@ const calcGameData = () => {
   return data;
 };
 
-export default () => makeGame(calcGameData, rules);
+export default () => makeGame(calcGameData, rule);

@@ -22,9 +22,9 @@ const runGame = (counter, data) => {
   return false;
 };
 
-export default (data, rules) => {
+export default (data, rule) => {
   console.log('Welcome to the Brain Games!');
-  console.log(`${rules} \n`);
+  console.log(`${rule}\n`);
   const name = readlineSync.question('May I ask your name? ');
   console.log(`Hello, ${name}! \n`);
 
