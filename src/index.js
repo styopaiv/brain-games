@@ -8,8 +8,7 @@ const runGame = (counter, data) => {
   }
 
   const gameData = data();
-  const question = gameData[0];
-  const correctAnswer = gameData[1];
+  const [question, correctAnswer] = gameData;
 
   console.log(`Question: ${question}`);
   const userAnswer = readlineSync.question('Your answer: ');
