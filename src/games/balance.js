@@ -1,11 +1,7 @@
 import makeGame from '..';
+import getRandomNum from '../utils';
 
 const rule = 'Balance the given number.';
-
-const balanceGameNum = () => {
-  const randomNum = Math.floor(Math.random() * (5000 - 1)) + 1;
-  return randomNum;
-};
 
 const arrayFromNum = num =>
   `${num}`.split('').map(char => +char);
@@ -29,7 +25,7 @@ const balanceNum = (num) => {
 };
 
 const balanceGameData = () => {
-  const question = balanceGameNum();
+  const question = getRandomNum(5000);
   const correctAnswer = balanceNum(question);
 
   return [question, correctAnswer];

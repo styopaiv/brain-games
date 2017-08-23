@@ -2,7 +2,7 @@ import makeGame from '..';
 import getRandomNum from '../utils';
 
 const rule = 'What number is missing in this progression?';
-const interval = getRandomNum();
+const interval = getRandomNum(100);
 
 const getRandomElem = () => {
   const num = Math.floor(Math.random() * (10 - 1)) + 1;
@@ -11,7 +11,7 @@ const getRandomElem = () => {
 
 const createProg = () => {
   const arr = [];
-  const progStart = getRandomNum();
+  const progStart = getRandomNum(100);
 
   const iter = (acc, num) => {
     if (acc.length === 10) {

@@ -11,8 +11,8 @@ const calcGcd = (a, b) => {
 };
 
 export const gcdGameData = () => {
-  const randomNum1 = getRandomNum();
-  const randomNum2 = getRandomNum();
+  const randomNum1 = getRandomNum(100);
+  const randomNum2 = getRandomNum(100);
   const question = `${randomNum1} ${randomNum2}`;
   const correctAnswer = `${calcGcd(randomNum1, randomNum2)}`;
 

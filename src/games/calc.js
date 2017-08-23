@@ -30,8 +30,8 @@ const getCalcAnswer = (a, b, operator) => {
 };
 
 const calcGameData = () => {
-  const num1 = getRandomNum();
-  const num2 = getRandomNum();
+  const num1 = getRandomNum(100);
+  const num2 = getRandomNum(100);
   const operator = getOperator();
   const data = getCalcAnswer(num1, num2, operator);
 

@@ -1,5 +1,5 @@
-const getRandomNum = () => {
-  const randomNum = Math.floor(Math.random() * (100 - 1)) + 1;
+const getRandomNum = (range) => {
+  const randomNum = Math.floor(Math.random() * (range - 1)) + 1;
   return randomNum;
 };
 
