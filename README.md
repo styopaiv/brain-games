@@ -5,10 +5,6 @@
 $ npm i brain-games-ivstyopa
 ```
 
-[Hexlet project.](https://ru.hexlet.io/projects)
-
-
-
 [![Code Climate](https://codeclimate.com/github/xibalbaroad/project-lvl1-s120/badges/gpa.svg)](https://codeclimate.com/github/xibalbaroad/project-lvl1-s120)
 
 [![Test Coverage](https://codeclimate.com/github/xibalbaroad/project-lvl1-s120/badges/coverage.svg)](https://codeclimate.com/github/xibalbaroad/project-lvl1-s120/coverage)
